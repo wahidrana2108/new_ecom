@@ -19,7 +19,7 @@
       <p>Name: <span>$user_name</span></p>
       <p>Email: <span>$user_email</span></p>      
       <p><a href='' id='order-btn'>Your orders</a></p>     
-      <p><a href='logout.php' id='logout-btn'>Logout</a></p>
+      <p><a href='assets/include/logout.php' id='logout-btn'>Logout</a></p>
       
       </div>
       

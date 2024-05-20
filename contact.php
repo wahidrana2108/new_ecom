@@ -8,7 +8,7 @@
             <h3>Contact Us</h3>
             <hr class="mx-auto">
             <p class="w-50 mx-auto">
-                phone number: <span>01799843687</span>
+                phone number: <span>01770888280</span>
             </p>
             <p class="w-50 mx-auto">
                Email Address:<span> Apple@gmail.com</span> 

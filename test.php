@@ -1,8 +1,11 @@
 <?php
-  include('server/connection.php');
+  include('assets/include/functions.php');
   session_start();
-  if(isset($_SESSION['user_email'])){
-    $email = $_SESSION['user_email'];
-    echo $email ;}
-  else{echo"no session";}
+  if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    echo"$id";
+  }
+  else{
+    echo"no id found";
+  }
 ?>

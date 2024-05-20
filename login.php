@@ -33,6 +33,9 @@
     </section>'";
 
      include('assets/include/footer.php');}
+     else{
+      echo "<script>window.open('account.php','_self')</script>"; 
+     }
 
     if(isset($_POST['login'])){   
         $customer_email = $_POST['c_email'];  

@@ -1,6 +1,5 @@
 <?php
-  include('server/connection.php');
-  include('server/function.php');
+  include('assets/include/functions.php');
 ?>
 
 <!DOCTYPE html>

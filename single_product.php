@@ -14,15 +14,20 @@ if(isset($_GET['product_id'])) {
   $pro_img4 = $row_product['product_image4'];
   $pro_desc = $row_product['product_description'];
   $pro_cat = $row_product['product_category'];
+  
+  // Call add_to_cart function after form submission
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      add_to_cart();
+  }
 
-//no product id 
-}else{
+// no product id 
+} else {
   echo "<script>window.open('index.php','_self')</script>";
 }
 ?>
 
-  <!--Single product-->
-  <section class="container single-product my-5 pt-5">
+<!--Single product-->
+<section class="container single-product my-5 pt-5">
     <div class="row mt-5">
         <div class="col-lg-5 col-md-6 col-sm-12">
             <div class="col-lg-5 col-md-6mcol-sm-12">
@@ -48,32 +53,30 @@ if(isset($_GET['product_id'])) {
     <h3 class="py-4"><?php echo $pro_title?></h3>
     <h2>$<?php echo $pro_price?></h2>
 
-    <form method="POST" action="cart.php">
-      <input type="hidden" name="product_image" value="<?php echo $product_id ?>"/>
+    <form method="POST" action="single_product.php?product_id=<?php echo $product_id; ?>">
+      <input type="hidden" name="product_id" value="<?php echo $product_id ?>"/>
       <input type="hidden" name="product_image" value="<?php echo $pro_img1; ?>"/>
       <input type="hidden" name="product_name" value="<?php echo $pro_title; ?>"/>
-      <input type="hidden" name="product_name" value="<?php echo $pro_price; ?>"/>
+      <input type="hidden" name="product_price" value="<?php echo $pro_price; ?>"/>
 
       <input type="number" name="product_quantity" value="1"/>
       <button class="buy-btn" type="submit" name="add_to_cart">Add to Cart</button>
-    </from>
+    </form>
    
     <h4 class="mt-5 mb-5">Product Details</h4>
-    <span><?php echo $pro_desc;?>
-  </span>
+    <span><?php echo $pro_desc;?></span>
 </div>
-</form>
 
         </div>
       </section>
 
-      <!--Realated product-->
+      <!--Related product-->
 
     <section id="featured" class="my-5 pb-5">
       <div class="container text-center mt-5 py-5">
-        <h3>Realated product</h3>
+        <h3>Related product</h3>
         <hr>
-        <p>Here you can check out Realated Products</p>
+        <p>Here you can check out Related Products</p>
       </div>
     <?php
       $get_products = "select * from products where product_category='$pro_cat'";
@@ -123,6 +126,3 @@ if(isset($_GET['product_id'])) {
   <?php
     include("assets/include/footer.php");
   ?>
-        
-</body>
-</html>

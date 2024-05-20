@@ -64,7 +64,7 @@
       </div>
       <div class="row mx-auto container-fluid">
       <?php
-                      $get_products = "select * from products";
+              $get_products = "select * from products";
               $run_products = mysqli_query($conn,$get_products);
 
               while($row_products=mysqli_fetch_array($run_products)){
