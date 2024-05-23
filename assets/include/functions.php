@@ -17,8 +17,8 @@ function add_to_cart(){
 
         $pro = "insert into order_items (user_id, product_id, order_id) values ('$user_id', '$pro_id', '$order_id')";
         $run_pro = mysqli_query($conn, $pro);
-        if(!$run_pro){
-            echo "<script>window.open('contact.php','_self')</script>"; 
+        if($run_pro){
+            echo "<script>window.open('cart.php','_self')</script>"; 
         }
     }
 }
