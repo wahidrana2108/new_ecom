@@ -9,9 +9,9 @@ if (isset($_SESSION['user_email'])) {
     $row_user = mysqli_fetch_array($run_user);
     $user_id = $row_user['user_id'];
 
-    $get_orders = "SELECT * FROM order_items WHERE user_id='$user_id'";
+    $get_orders = "SELECT * FROM order_items WHERE user_id='$user_id' && in_cart='1'";
     $run_orders = mysqli_query($conn, $get_orders);
-    
+
     echo "
     <section class='cart container my-5 py-5'>
         <div class='container mt-5'>
@@ -24,9 +24,10 @@ if (isset($_SESSION['user_email'])) {
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>";
-    
+
     $total = 0;
     while ($row_order = mysqli_fetch_array($run_orders)) {
+        $order_id = $row_order['order_id'];
         $product_id = $row_order['product_id'];
         $product_quantity = $row_order['quantity'];
 
@@ -55,8 +56,7 @@ if (isset($_SESSION['user_email'])) {
                 </div>
             </td>
             <td>
-                <input type='number' value='$product_quantity'/>
-                <a class='edit-btn' href='edit_cart.php?product_id=$product_id'>Edit</a>
+                <input type='number' value='$product_quantity' readonly/>
             </td>
             <td>
                 <span>$</span>
@@ -80,12 +80,15 @@ if (isset($_SESSION['user_email'])) {
             </table>
         </div>
         <div class='checkout-container'>
-            <button class='btn checkout-btn'>Checkout</button>
+            <form action='checkout.php' method='post'>
+                <input type='hidden' name='total' value='$total'/>
+                <button type='submit' class='btn checkout-btn'>Checkout</button>
+            </form>
         </div>
     </section>";
 
     include("assets/include/footer.php");
 } else {
-    echo "<script>window.open('login.php','_self')</script>";
+    echo "<script>window.open('login.php','_self');</script>";
 }
 ?>
