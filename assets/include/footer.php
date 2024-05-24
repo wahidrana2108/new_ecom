@@ -35,8 +35,8 @@
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
             
             <div class="row">
-              <img src="assets/CSS/js/imgs/1691832460x-twitter-logo-png.png" class="img-fluid w-25 h-100 m-2"/>
-              <img src="assets/CSS/js/imgs/sm_5afaf0c36298b.jpg" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/imgs/1691832460x-twitter-logo-png.png" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/imgs/sm_5afaf0c36298b.jpg" class="img-fluid w-25 h-100 m-2"/>
               <img src="  " class="img-fluid w-25 h-100 m-2"/>
               <img src="  " class="img-fluid w-25 h-100 m-2"/>
               <img src="  " class="img-fluid w-25 h-100 m-2"/>
@@ -47,7 +47,7 @@
         <div class="copyright nt-5">
           <div class="row container mx-auto">
             <div class="col-lg-3 col-md-5 col-sm-12 mb-4">
-              <img src="assets/CSS/js/imgs/bkash1.PNG" alt="Footer Image">
+              <img src="assets/imgs/bkash1.PNG" alt="Footer Image">
             </div>
             <div class="col-lg-3 col-md-5 col-sm-12 nb-4 text-nowrap mb-2">
               <p>eCommerce e 2024 All Right Reserved</p>
