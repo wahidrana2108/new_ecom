@@ -11,7 +11,7 @@
                 phone number: <span>01770888280</span>
             </p>
             <p class="w-50 mx-auto">
-               Email Address:<span> Apple@gmail.com</span> 
+               Email Address:<span> Wahidzamanrana@gmail.com</span> 
             </p>
             <p class="w-50 mx-auto">
                we work 24/7 to answer your questions

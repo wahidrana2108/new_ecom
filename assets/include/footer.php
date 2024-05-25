@@ -29,7 +29,7 @@
             </div>
             <div>
               <h6 class="test-uppercase">Email</h6>
-              <p>Apple@gmail.com</p>
+              <p>Wahidzamanrana@gmail.com</p>
             </div>
           </div>
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
